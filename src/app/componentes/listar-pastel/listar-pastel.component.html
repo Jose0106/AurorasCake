@@ -1,0 +1,44 @@
+<div class="card">
+    <div class="card-header">
+        
+        
+        <a class="btn btn-success" routerLink="/agregar-pastel/" >Agregar nuevo pastel</a>
+
+    </div>
+    <div class="card-body">
+        <h1>Lista de Pasteles</h1>
+        <div class="table-responsive-xl">
+            <table class="table table-danger">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">No. de Personas</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let pastel of Pastels; let iControl=index" class="">
+                        <td> {{ pastel.id }}</td>
+                        <td> {{ pastel.nombre }} </td>
+                        <td> {{ pastel.precio }} </td>
+                        <td> {{ pastel.personas }} </td>
+                        <td> {{ pastel.descripcion }} </td>
+                        <td> {{ pastel.imagen }} </td>
+                        <td>
+                            <a class="btn btn-info" routerLink="/editar-pastel/ {{ pastel.id }}" >Editar</a> /
+
+                            <a class="btn btn-danger" (click)="borrarRegistro(pastel.id,iControl)"role="button">Borrar</a>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    
+</div>

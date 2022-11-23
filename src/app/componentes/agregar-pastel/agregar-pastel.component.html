@@ -1,0 +1,51 @@
+<div class="card">
+    <div class="card-header">
+        Agregar Pastel
+    </div>
+    <div class="card-body">
+
+        <form ngNativeValidate  [formGroup]="formularioDePasteles" (ngSubmit)="enviarDatos()">
+
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre:</label>
+              <input required type="text"
+                class="form-control" name="" formControlName="nombre" id="" aria-describedby="helpId" placeholder="Nombre del pastel">
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Precio:</label>
+              <input required type="number"
+                class="form-control" name="" formControlName="precio" id="" aria-describedby="helpId" placeholder="Precio de pastel">
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">No. de Personas:</label>
+              <input type="number"
+                class="form-control" name=""  formControlName="personas"  id="" aria-describedby="helpId" placeholder="Numero de Personas">
+              <small id="helpId" class="form-text text-muted"></small>
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Descripcion:</label>
+              <input type="text"
+                class="form-control" name=""  formControlName="descripcion" id="" aria-describedby="helpId" placeholder="Descripcion del Producto">
+              <small id="helpId" class="form-text text-muted"></small>
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Elegir Imagen:</label>
+              <input type="file" class="" name="" formControlName="imagen" id="" placeholder="" aria-describedby="fileHelpId">
+              <div id="fileHelpId" class="form-text"></div>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Button group name">
+                <button type="submit" class="btn btn-success">Agregar</button>
+                <button type="button" routerLink="/listar-pastel/" class="btn btn-primary">Cancelar</button>
+                
+            </div>
+
+        </form>
+        
+    </div>
+   
+</div>

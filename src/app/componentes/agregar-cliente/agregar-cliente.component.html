@@ -1,0 +1,43 @@
+<div class="card">
+    <div class="card-header">
+        Agregar cliente
+    </div>
+    <div class="card-body">
+
+        <form ngNativeValidate >
+
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre:</label>
+              <input required type="text"
+                class="form-control" name="" formControlName="nombre" id="" aria-describedby="helpId" placeholder="Nombre completo">
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Correo:</label>
+              <input required type="email"
+                class="form-control" name="" formControlName="correo" id="" aria-describedby="helpId" placeholder="Correo electronico ">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Direccion:</label>
+                <input required type="text"
+                  class="form-control" name="" formControlName="direccion" id="" aria-describedby="helpId" placeholder="Direccion del cliente">
+              </div>
+
+              <div class="mb-3">
+                <label for="" class="form-label">Telefono:</label>
+                <input required type="text"
+                  class="form-control" name="" formControlName="telefono" id="" aria-describedby="helpId" placeholder="Telefono de contacto">
+              </div>
+
+            <div class="btn-group" role="group" aria-label="Button group name">
+                <button type="submit" class="btn btn-success">Agregar</button>
+                <button type="button" routerLink="/listar-cliente" class="btn btn-primary">Cancelar</button>
+                
+            </div>
+
+        </form>
+        
+    </div>
+   
+</div>
